@@ -1,132 +1,213 @@
-# ⚡ Electricity-bill-calculator-using-ANN
+⚡ AI Electricity Bill Predictor
 
-A smart web application for calculating monthly electricity bills using Artificial Neural Networks (ANN), built with **FastAPI** and a modern HTML/CSS/JavaScript frontend. This project enables users to estimate their electricity usage and bill based on TNEB tariff rates, providing accurate and efficient results.
+Predict monthly electricity bills using Artificial Neural Networks (ANN) with a modern web interface.
 
----
+A smart web application that estimates electricity bills based on TNEB tariff rates using a trained Artificial Neural Network model.
+The project combines Machine Learning + FastAPI + Modern Web Development to create an intelligent electricity bill prediction system.
 
-## 📝 Introduction
+🚀 Live Demo (Optional)
 
-**Electricity-bill-calculator-using-ANN** leverages machine learning to predict and calculate electricity bills for users in Tamil Nadu (TNEB tariff). The backend, powered by Python and FastAPI, hosts a trained ANN model, while the frontend delivers an intuitive interface with PWA capabilities. This project demonstrates the synergy between modern web technologies and AI for real-world utility applications.
+Add this later if you deploy the project.
 
----
+Demo Link: Coming Soon
+📌 Project Overview
 
-## 🚀 Features
+Electricity bill calculation can be complex due to changing tariff slabs and usage patterns.
 
-- **ANN-based Bill Prediction:** Uses a trained neural network for accurate bill estimation.
-- **FastAPI Backend:** High-performance Python API with CORS support.
-- **Responsive Frontend:** Built with HTML, CSS, and JavaScript.
-- **PWA Support:** Installable web app with offline caching (Service Worker).
-- **Dockerized Backend:** Easy deployment via Docker.
-- **TNEB Tariff Support:** Calculates bills based on Tamil Nadu's electricity tariff.
+This project solves that by using an ANN model trained on electricity consumption patterns to predict electricity bills efficiently.
 
----
+The system includes:
 
-## ⚙️ Installation
+• AI model for bill prediction
+• FastAPI backend for inference
+• Modern responsive frontend
+• Progressive Web App (PWA) support
+• Docker containerization
 
-### 1. Clone the Repository
+This makes the application fast, scalable, and easy to deploy.
 
-```bash
-git clone https://github.com/selvaganesh19/Electricity-bill-calculator-using-ANN.git
-cd Electricity-bill-calculator-using-ANN
-```
+✨ Features
 
-### 2. Backend Setup
+✅ AI-based electricity bill prediction
+✅ FastAPI high-performance backend
+✅ Responsive modern frontend
+✅ Progressive Web App (Installable App)
+✅ Offline caching using Service Worker
+✅ Dockerized backend for easy deployment
+✅ Supports Tamil Nadu Electricity Board (TNEB) tariff system
 
-#### Using Docker (Recommended)
+🧠 AI Model
 
-```bash
-cd backend
-docker build -t electricity-bill-backend .
-docker run -p 7860:7860 electricity-bill-backend
-```
+The electricity bill prediction is powered by a trained Artificial Neural Network (ANN).
 
-#### Or Local Python Setup
+Model Inputs
 
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 7860
-```
+Electricity units consumed
 
-### 3. Frontend Setup
+Tariff slab ranges
 
-Simply open `frontend/index.html` in your browser, or serve it via any static file server.
+TNEB billing rules
 
----
+Model Output
 
-## 📖 Usage
+Estimated electricity bill
 
-1. **Start the Backend:** Make sure the FastAPI backend is running (see installation above).
-2. **Open Frontend:** Visit `frontend/index.html` in your browser or host the frontend at a static server.
-3. **Input Details:** Enter your monthly electricity consumption and relevant details.
-4. **Get Bill Estimate:** Click "Calculate" to view the estimated bill based on TNEB tariff.
+Libraries used:
 
-> **PWA Install:** On supported browsers, you can install the app for offline use!
+TensorFlow / Keras
 
----
+Joblib
 
-## 🤝 Contributing
+NumPy
 
-Contributions are welcome! Please follow these steps:
+Scikit-learn
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes.
-4. Push your branch (`git push origin feature-name`).
-5. Create a Pull Request.
+🛠 Tech Stack
+Backend
 
-Please ensure your code follows project style and includes tests if applicable.
+Python
 
----
+FastAPI
 
-## 📜 License
+TensorFlow / Keras
 
-This project is licensed under the [MIT License](LICENSE).
+Joblib
 
----
+Frontend
 
-## 🛠️ Tech Stack
+HTML
 
-- **Backend:** Python, FastAPI, TensorFlow/Keras, joblib
-- **Frontend:** HTML, CSS, JavaScript, PWA
-- **Containerization:** Docker
+CSS
 
----
+JavaScript
 
-## 📂 Project Structure
+Deployment
 
-```
-Electricity-bill-calculator-using-ANN/
+Docker
+
+PWA (Service Worker)
+
+📂 Project Structure
+ai-electricity-bill-predictor
 │
-├── backend/
+├── backend
 │   ├── Dockerfile
 │   ├── main.py
+│   ├── model.h5
+│   ├── scaler.save
+│   ├── y_scaler.save
 │   └── requirements.txt
 │
-├── frontend/
+├── frontend
 │   ├── index.html
 │   ├── manifest.json
 │   ├── sw.js
 │   └── icon/
 │
+├── .gitignore
+├── LICENSE
 └── README.md
-```
+⚙️ Installation
+1️⃣ Clone Repository
+git clone https://github.com/eswaran200dsu/ai-electricity-bill-predictor.git
+cd ai-electricity-bill-predictor
+🖥 Backend Setup
+Option 1 — Docker (Recommended)
+cd backend
+docker build -t electricity-bill-backend .
+docker run -p 7860:7860 electricity-bill-backend
+Option 2 — Local Setup
+cd backend
+python -m venv venv
 
----
+Activate environment
 
-## ✨ Acknowledgements
+Windows
 
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [TensorFlow/Keras](https://www.tensorflow.org/)
-- [Joblib](https://joblib.readthedocs.io/)
-- [TNEB Tariff Reference](https://www.tnebnet.org/)
+venv\Scripts\activate
 
----
+Install dependencies
 
-> For any questions or support, feel free to open an issue!
+pip install -r requirements.txt
 
+Run FastAPI server
 
----
-🔗 GitHub Repo: https://github.com/eswaran200dsu/Electricity-bill-calculator-using-ANN
+uvicorn main:app --host 0.0.0.0 --port 7860
+🌐 Frontend Setup
+
+Open the frontend directly in browser
+
+frontend/index.html
+
+Or serve it using any static server.
+
+📖 How It Works
+
+1️⃣ User enters electricity consumption
+2️⃣ Frontend sends request to FastAPI API
+3️⃣ ANN model processes the input
+4️⃣ Predicted electricity bill is returned
+5️⃣ Frontend displays the estimated bill
+
+📱 Progressive Web App
+
+This project supports PWA installation.
+
+Users can:
+
+✔ Install the app
+✔ Use offline caching
+✔ Get faster loading
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Steps:
+
+1️⃣ Fork the repository
+2️⃣ Create a feature branch
+
+git checkout -b feature-name
+
+3️⃣ Commit changes
+
+git commit -m "Add feature"
+
+4️⃣ Push branch
+
+git push origin feature-name
+
+5️⃣ Open Pull Request
+
+📜 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Eswaran
+
+AI & Data Science Student
+Passionate about Machine Learning, AI Applications, and Data Science
+
+GitHub
+https://github.com/eswaran200dsu
+
+⭐ Support
+
+If you found this project helpful:
+
+⭐ Star the repository
+🍴 Fork the project
+📢 Share with others
+
+🔥 Result
+
+This README now has:
+
+✅ Professional structure
+✅ Recruiter-friendly explanation
+✅ Clean sections
+✅ AI model explanation
+✅ Project workflow
