@@ -127,8 +127,6 @@ Electricity-bill-calculator-using-ANN/
 
 > For any questions or support, feel free to open an issue!
 
-## License
-This project is licensed under the **MIT** License.
 
 ---
-🔗 GitHub Repo: https://github.com/selvaganesh19/Electricity-bill-calculator-using-ANN
+🔗 GitHub Repo: https://github.com/eswaran200dsu/Electricity-bill-calculator-using-ANN
